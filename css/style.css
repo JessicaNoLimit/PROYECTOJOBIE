@@ -1,0 +1,117 @@
+/* margenyborde */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #222;
+  background-color: #2d2c37; /* fondo oscuro */
+  line-height: 1.6;
+}
+
+/* contenedores */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* contnedor logo y menu */
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* logo imagen */
+.logo-img {
+  height: 80px;
+  width: auto;
+  margin-right: 20px;
+}
+ 
+
+/* titulo */
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+/*cabecera */
+.main-header {
+  background-image: url("../imagenes/imagenHero.jpg");
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 40px 0;
+}
+
+/* navegar */
+.nav {
+  display: flex;
+  justify-content: flex-end;
+  gap: 20px;
+  list-style: none;
+}
+.nav a {
+  text-decoration: none;
+  color: #6755c0; /* color lila azulado */
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+.nav a:hover {
+  color: #00aaff; /* azul nav al pasar */
+}
+
+/* hero */
+.hero-section {
+  background-image: url("../imagenes/imagenHERO.png");
+  background-size: cover;
+  background-position: center;
+  padding: 120px 20px;
+  color: rgb(171, 212, 225);
+  text-align: center;
+}
+.hero-content h2 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+.hero-content p {
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+/* boton*/
+.btn {
+  background-color: #00aaff;
+  color: white;
+  padding: 12px 25px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+.btn:hover {
+  background-color: #0077aa;
+}
+/* general secciones */
+.seccion {
+  padding: 60px 20px;       
+  /* espacio interior*/
+  color: #f0f0f0;           
+  /* color claro texto */
+  font-size: 18px;          
+  /* tamaño de el texto */
+  line-height: 1.8;         
+  /*espaciado de lineas */
+}
+/* estilos de titulo */
+.seccion h2 {
+  font-size: 32px;         /* tamaño*/
+  margin-bottom: 20px;     /* espacio debajo de el titulo */
+  color: #ffffff;          /* color blanco */
+}
