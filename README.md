@@ -13,7 +13,6 @@ Este es un sitio web estático tipo escaparate profesional, creado para represen
 - JavaScript (se integrará en etapas finales)
 - Git y GitHub (control de versiones)
 
-
 ---
 
 ## 📁 Estructura del sitio
@@ -30,32 +29,40 @@ El sitio está dividido en varias páginas:
 ## 🎯 Objetivo del proyecto
 
 Crear un escaparate web profesional y funcional, que transmita los valores de seriedad, solidez y confianza propios del sector metalúrgico.  
-El diseño ha sido desarrollado con enfoque responsive, accesibilidad y claridad visual.
+El desarrollo se enfoca en la claridad visual, la navegabilidad y la estructura modular del código.
 
 ---
 
 ## 📌 Estado del proyecto
 
 ✅ Maquetación HTML y estructura completa  
-✅ Estilos CSS aplicados y adaptados  
+✅ Estilos CSS aplicados y organizados  
 🚧 Integración de funcionalidades JavaScript en curso  
 ✍️ Documentación técnica (memoria) en elaboración
 
 ---
 
-## 🧑‍💻 Autoría
+## 🧰 Cómo ejecutar el proyecto localmente
 
+1. Clona este repositorio en tu equipo:
+
+```bash
+git clone https://github.com/JessicaNoLimit/PROYECTOJOBIE.git
+Abre la carpeta clonada con tu editor (recomendado: Visual Studio Code).
+
+Abre el archivo index.html en tu navegador web para ver la página principal.
+
+📁 El resto de páginas (nosotros.html, servicios.html, contacto.html) están enlazadas desde el menú de navegación y también se pueden abrir directamente desde el navegador.
+
+📎 Requisitos
+No se necesita ningún servidor ni instalación adicional.
+Este proyecto es completamente estático y funciona con cualquier navegador moderno (Chrome, Firefox, Edge...).
+
+👥 Autoría
 Desarrollado por:
 
-- Jesica Serrano (@JessicaNoLimit)  
-- Artem Semenov
+Jesica Serrano (@JessicaNoLimit)
 
-Proyecto para el módulo de **Desarrollo Web en Entorno Cliente** del ciclo DAW.
+Artem Semenov
 
----
-
-## 📸 Vista previa
-
-*(Aquí puedes añadir una captura de la web si quieres más adelante)*
-
----
+Proyecto realizado para el módulo de Desarrollo Web en Entorno Cliente del ciclo DAW Jobie (modalidad a distancia).
