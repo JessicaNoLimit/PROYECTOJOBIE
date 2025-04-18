@@ -32,8 +32,22 @@
       <p>
         Completa el formulario y uno de nuestros especialistas se pondrá en contacto contigo lo antes posible para ofrecerte una solución a medida.
       </p>
+      <!-- formulario de contacto -->
+      <form id="formulario-contacto" class="formulario-caja">
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" name="nombre" required>
+
+      <label for="email">Correo electrónico:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="mensaje">Mensaje:</label>
+      <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+
+      <button type="submit" class="btn">Enviar</button>
+    </form> 
     </div>
   </section>
-
+ <!-- JS: validaciones -->
+ <script src="js/script.js"></script>
 </body>
 </html>
