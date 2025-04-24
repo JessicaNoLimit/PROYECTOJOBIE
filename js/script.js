@@ -1,4 +1,4 @@
-// scroll suave
+//JESICA scroll suave
 document.querySelectorAll('a[href^="#"]').forEach(enlace => {
     enlace.addEventListener('click', function (e) {
       e.preventDefault();
@@ -10,7 +10,7 @@ document.querySelectorAll('a[href^="#"]').forEach(enlace => {
       }
     });
   });
-  // validacion del campo nombre
+  // JESICA validacion del campo nombre
 const formulario = document.getElementById('formulario-contacto');
 
 formulario.addEventListener('submit', function(e) {
