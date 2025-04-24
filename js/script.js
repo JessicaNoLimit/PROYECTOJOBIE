@@ -21,3 +21,71 @@ formulario.addEventListener('submit', function(e) {
     alert('Por favor, escribe un nombre valido (minimo 3 letras)');
   }
 });
+
+//ARTEM BOTÓN PARA MOSTRAR / OCULTAR INFO DE SERVICIOS
+
+// Recorremos todos los botones que tienen la clase "toggle-btn"
+document.querySelectorAll('.toggle-btn').forEach(boton => {
+  // Al hacer clic en el botón...
+  boton.addEventListener('click', () => {
+    // Obtenemos el bloque de contenido asociado usando el atributo "data-target"
+    const bloque = document.getElementById(boton.dataset.target);
+
+    // Cambiamos su visibilidad activando o quitando la clase "activo"
+    bloque.classList.toggle('activo');
+
+    // Cambiamos el texto del botón según el estado
+    if (bloque.classList.contains('activo')) {
+      boton.textContent = 'Ver menos'; // Si está visible, damos opción a "ver menos"
+    } else {
+      boton.textContent = 'Ver más'; // Si está oculto, mostramos "ver más"
+    }
+  });
+});
+
+//ARTEM FILTRO DINÁMICO PARA LA GALERÍA 
+
+// Obtenemos todos los botones de filtro
+const botonesFiltro = document.querySelectorAll(".filtro");
+
+// Y todos los ítems de la galería que se pueden mostrar u ocultar
+const itemsGaleria = document.querySelectorAll(".item-galeria");
+
+// Por cada botón, asignamos el comportamiento al hacer clic
+botonesFiltro.forEach(boton => {
+  boton.addEventListener("click", () => {
+    const categoriaSeleccionada = boton.dataset.categoria;
+
+    // Recorremos todos los ítems y decidimos si se muestran o no
+    itemsGaleria.forEach(item => {
+      const perteneceACategoria = item.classList.contains(categoriaSeleccionada);
+      const mostrarTodo = categoriaSeleccionada === "todos";
+
+      item.style.display = perteneceACategoria || mostrarTodo ? "block" : "none";
+    });
+  });
+});
+
+//ARTEM VALIDACIÓN DEL CAMPO EMAIL Y MENSAJE
+
+// Referencias al formulario y a sus campos
+const campoEmail = document.getElementById("email");
+const campoMensaje = document.getElementById("mensaje");
+
+// Al intentar enviar el formulario...
+formulario.addEventListener("submit", function(evento) {
+  // Expresión regular para validar correos tipo "usuario@dominio.com"
+  const patronEmail = /^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/;
+
+  // Validación del email
+  if (!patronEmail.test(campoEmail.value)) {
+    evento.preventDefault(); // Evitamos el envío
+    alert("Por favor, introduce un correo electrónico válido con formato usuario@dominio.com.");
+  }
+
+  // Validación del mensaje vacío
+  if (campoMensaje.value.trim() === "") {
+    evento.preventDefault(); // Evitamos el envío
+    alert("El campo de mensaje no puede estar vacío. Escribe algo para poder ayudarte.");
+  }
+});
