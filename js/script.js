@@ -1,3 +1,4 @@
+
 //JESICA scroll suave
 document.querySelectorAll('a[href^="#"]').forEach(enlace => {
     enlace.addEventListener('click', function (e) {
@@ -10,17 +11,48 @@ document.querySelectorAll('a[href^="#"]').forEach(enlace => {
       }
     });
   });
-  // JESICA validacion del campo nombre
-const formulario = document.getElementById('formulario-contacto');
+//  JESICA Animación palabra por palabra 
+window.addEventListener("load", () => {
+  const titulo = document.getElementById("titulo-animado");
+  const texto = titulo.textContent;
+  const palabras = texto.split(" ");
 
-formulario.addEventListener('submit', function(e) {
-  const nombre = document.getElementById('nombre').value.trim();
+  titulo.textContent = ""; // Vacia el contenido original
 
-  if (nombre.length < 3) {
-    e.preventDefault(); // evita que se envie
-    alert('Por favor, escribe un nombre valido (minimo 3 letras)');
-  }
+  palabras.forEach((palabra, index) => {
+    const span = document.createElement("span");
+    span.textContent = palabra + " ";
+    span.style.opacity = 0;
+    span.style.transition = "opacity 0.6s ease";
+    titulo.appendChild(span);
+
+    setTimeout(() => {
+      span.style.opacity = 1;
+    }, index * 500); //  espacio de tiempo entre palabra y palabra 500ms 
+  });
 });
+// JESICA - Cambio de texto en el botón de servicios al pasar el ratón
+const boton = document.getElementById("btn-servicios");
+
+boton.addEventListener("mouseover", () => {
+  boton.textContent = "¡Haz clic para ver nuestros servicios!";
+});
+
+boton.addEventListener("mouseout", () => {
+  boton.textContent = "Trabajos de calidad a tu servicio";
+});
+
+  // JESICA validacion del campo nombre
+  const formulario = document.getElementById('formulario-contacto');
+
+  formulario.addEventListener('submit', function(e) {
+    const nombre = document.getElementById('nombre').value.trim();
+  
+    if (nombre.length < 3) {
+      e.preventDefault(); // evita que se envie
+      alert('Por favor, escribe un nombre valido (minimo 3 letras)');
+    }
+  });
 
 //ARTEM BOTÓN PARA MOSTRAR / OCULTAR INFO DE SERVICIOS
 

@@ -94,7 +94,7 @@ body {
   border-radius: 4px;
   text-decoration: none;
   font-weight: bold;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 .btn:hover {
   background-color: #0077aa;
@@ -201,13 +201,11 @@ body {
   color: #ddd;
 }
 
-/* estilo boton */
-.formulario-caja .btn {
-  background-color: #00aaff;
-  color: white;
-  padding: 12px 25px;
-  border: none;
-  border-radius: 6px;
-
+/* estilo titulo index.html */
+#titulo-animado span {
+  display: inline-block;
+  opacity: 0;
+  margin-right: 10px;
 }
+
 /* jesica css style */
