@@ -37,22 +37,43 @@ const boton = document.getElementById("btn-servicios");
 boton.addEventListener("mouseover", () => {
   boton.textContent = "¡Haz clic para ver nuestros servicios!";
 });
-
 boton.addEventListener("mouseout", () => {
   boton.textContent = "Trabajos de calidad a tu servicio";
 });
+// formulario contacto
 
-  // JESICA validacion del campo nombre
+  // VALIDACIÓN FORMULARIO
   const formulario = document.getElementById('formulario-contacto');
+  console.log("📩 Formulario encontrado:", formulario);
 
-  formulario.addEventListener('submit', function(e) {
-    const nombre = document.getElementById('nombre').value.trim();
-  
-    if (nombre.length < 3) {
-      e.preventDefault(); // evita que se envie
-      alert('Por favor, escribe un nombre valido (minimo 3 letras)');
-    }
-  });
+  if (formulario) {
+    formulario.addEventListener('submit', function(e) {
+      const nombre = document.getElementById('nombre').value.trim();
+      const campoEmail = document.getElementById('email');
+      const campoMensaje = document.getElementById('mensaje');
+      const patronEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+      if (nombre.length < 3) {
+        e.preventDefault();
+        alert('Por favor, escribe un nombre válido (mínimo 3 letras).');
+        return;
+      }
+
+      if (!patronEmail.test(campoEmail.value.trim())) {
+        e.preventDefault();
+        alert('Por favor, introduce un correo electrónico válido.');
+        return;
+      }
+
+      if (campoMensaje.value.trim() === "") {
+        e.preventDefault();
+        alert('El mensaje no puede estar vacío.');
+        return;
+      }
+    });
+  }
+
+
 
 //ARTEM BOTÓN PARA MOSTRAR / OCULTAR INFO DE SERVICIOS
 
@@ -96,28 +117,4 @@ botonesFiltro.forEach(boton => {
       item.style.display = perteneceACategoria || mostrarTodo ? "block" : "none";
     });
   });
-});
-
-//ARTEM VALIDACIÓN DEL CAMPO EMAIL Y MENSAJE
-
-// Referencias al formulario y a sus campos
-const campoEmail = document.getElementById("email");
-const campoMensaje = document.getElementById("mensaje");
-
-// Al intentar enviar el formulario...
-formulario.addEventListener("submit", function(evento) {
-  // Expresión regular para validar correos tipo "usuario@dominio.com"
-  const patronEmail = /^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/;
-
-  // Validación del email
-  if (!patronEmail.test(campoEmail.value)) {
-    evento.preventDefault(); // Evitamos el envío
-    alert("Por favor, introduce un correo electrónico válido con formato usuario@dominio.com.");
-  }
-
-  // Validación del mensaje vacío
-  if (campoMensaje.value.trim() === "") {
-    evento.preventDefault(); // Evitamos el envío
-    alert("El campo de mensaje no puede estar vacío. Escribe algo para poder ayudarte.");
-  }
 });
