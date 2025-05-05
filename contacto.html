@@ -1,19 +1,27 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contacto - Metálicas Jobie</title>
-  <link rel="stylesheet" href="css/style.css">
-</head>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Metálicas Jobie</title>
+    <!-- Conexión con CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/whatsapp.css" />
+  </head>
 <body>
 
-  <header class="main-header">
+  <header>
     <div class="container nav-container">
       <img src="imagenes/logo.jpg" alt="Logotipo Metálicas Jobie" class="logo-img">
-      <h1 class="logo">Ingeniería en Acero</h1>
-      <nav class="nav">
-        <ul class="nav">
+
+      <div class="hamburger" id="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+      </div>
+    
+      <nav class="nav" id="navMenu">
+        <ul>
           <li><a href="index.html">Inicio</a></li>
           <li><a href="nosotros.html">Sobre Nosotros</a></li>
           <li><a href="servicios.html">Servicios</a></li>
@@ -27,28 +35,47 @@
     <div class="container">
       <h2>Contáctanos</h2>
       <p>
-        ¿Tienes un proyecto en mente? Estamos aqui para ayudarte a hacerlo realidad.
+        ¿Tienes un proyecto en mente? Estamos aquí para ayudarte a hacerlo realidad.
       </p>
       <p>
         Completa el formulario y uno de nuestros especialistas se pondrá en contacto contigo lo antes posible para ofrecerte una solución a medida.
       </p>
-      <!-- JESICA formulario de contacto -->
+      <!-- Formulario de contacto -->
       <form id="formulario-contacto" class="formulario-caja">
-      <label for="nombre">Nombre:</label>
-      <input type="text" id="nombre" name="nombre" required>
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required>
 
-      <label for="email">Correo electrónico:</label>
-      <input type="email" id="email" name="email" required>
+        <label for="email">Correo electrónico:</label>
+        <input type="email" id="email" name="email" required>
 
-      <label for="mensaje">Mensaje:</label>
-      <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+        <label for="mensaje">Mensaje:</label>
+        <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
 
-      <button type="submit" class="btn">Enviar</button>
-    </form> 
+        <button type="submit" class="btn">Enviar</button>
+      </form> 
     </div>
   </section>
- <!-- JS: validaciones -->
- <script src="js/validaciones.js"></script>
+
+  <!-- Mapa Google Maps -->
+  <section class="seccion">
+    <div class="container">
+      <h2>Encuéntranos</h2>
+      <div style="width: 100%; height: 400px; margin: 20px 0;">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3170.9851391833!2d-3.7037906846901987!3d37.38283067983292!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd71fccdd29ea812%3A0x5e604ec4ff2d8988!2sGranada!5e0!3m2!1ses!2ses!4v1683048419428!5m2!1ses!2ses"
+          width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+<!-- Botón WhatsApp -->
+ <div class="whatsapp" onclick="window.open('https://wa.me/34123456789','_blank')">💬</div>
+
+<!-- Botón Subir ⇧ -->
+<button id="btn-top" aria-label="Subir arriba del todo">⇧</button>
+     
+<!-- Conexión con JavaScript -->
+  <script src="js/script.js"></script>
 </body>
 </html>
-<!-- JESICA HTML-CSS -->

@@ -4,14 +4,27 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sobre Nosotros - Metálicas Jobie</title>
+  <!-- Conexión con CSS -->
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/whatsapp.css" />
+  <!-- Conexión con JavaScript -->
+  <script src="js/script.js" defer></script>
 </head>
 <body>
+
+  <!-- Header principal -->
+  <header>
     <div class="container nav-container">
       <img src="imagenes/logo.jpg" alt="Logotipo Metálicas Jobie" class="logo-img">
-      <h1 class="logo">Ingeniería en Acero</h1>
-      <nav class="nav">
-        <ul class="nav">
+
+      <div class="hamburger" id="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+      </div>
+
+      <nav class="nav" id="navMenu">
+        <ul>
           <li><a href="index.html">Inicio</a></li>
           <li><a href="nosotros.html">Sobre Nosotros</a></li>
           <li><a href="servicios.html">Servicios</a></li>
@@ -21,7 +34,7 @@
     </div>
   </header>
 
-  <!-- JESICA menu interno para navegación dentro de la página -->
+  <!-- Submenú independiente -->
   <nav class="sub-nav">
     <ul>
       <li><a href="#quienes-somos">¿Quiénes somos?</a></li>
@@ -31,7 +44,8 @@
       <li><a href="#compromiso">Compromiso</a></li>
     </ul>
   </nav>
-  
+
+  <!-- Sección principal -->
   <section class="seccion">
     <div class="container">
       <h2>Sobre Nosotros</h2>
@@ -43,64 +57,60 @@
       </p>
     </div>
   </section>
-  <!-- JESICA seccion quienes somos -->
-<section id="quienes-somos" class="sub-seccion">
-  <img src="imagenes/quienessomos.png" alt="Quienes somos" class="sub-seccion-img">
 
-  <div class="container">
-    <h2>¿Quiénes somos?</h2>
-    <p>
-      Somos una empresa con años de experiencia en el sector del metal. Nos especializamos en estructuras a medida, priorizando la calidad, el detalle y la confianza con cada cliente.
-    </p>
-  </div>
-</section>
-<!--JESICA seccion instalaciones -->
-<section id="instalaciones" class="sub-seccion">
-  <img src="imagenes/instalaciones.png" alt="Instalaciones" class="sub-seccion-img">
+  <!-- Secciones internas -->
+  <section id="quienes-somos" class="sub-seccion">
+    <img src="imagenes/quienessomos.png" alt="Quienes somos" class="sub-seccion-img">
+    <div class="container">
+      <h2>¿Quiénes somos?</h2>
+      <p>
+        Somos una empresa con años de experiencia en el sector del metal. Nos especializamos en estructuras a medida, priorizando la calidad, el detalle y la confianza con cada cliente.
+      </p>
+    </div>
+  </section>
 
-  <div class="container">
-    <h2>Instalaciones</h2>
-    <p>
-      Contamos con un taller propio totalmente equipado, donde fabricamos cada pieza con precisión. También disponemos de zona de pintura, almacén de materiales y espacio para montaje previo.
-    </p>
-  </div>
-</section>
-<!-- JESICA seccion equipo -->
-<section id="equipo" class="sub-seccion">
-  <img src="imagenes/equipo.png" alt="Equipo" class="sub-seccion-img">
+  <section id="instalaciones" class="sub-seccion">
+    <img src="imagenes/instalaciones.png" alt="Instalaciones" class="sub-seccion-img">
+    <div class="container">
+      <h2>Instalaciones</h2>
+      <p>
+        Contamos con un taller propio totalmente equipado, donde fabricamos cada pieza con precisión. También disponemos de zona de pintura, almacén de materiales y espacio para montaje previo.
+      </p>
+    </div>
+  </section>
 
-  <div class="container">
-    <h2>Equipo</h2>
-    <p>
-      Nuestro equipo está formado por profesionales con años de experiencia en carpintería metálica, diseño técnico y montaje de estructuras. Cada uno aporta valor y compromiso en cada proyecto.
-    </p>
-  </div>
-</section>
+  <section id="equipo" class="sub-seccion">
+    <img src="imagenes/equipo.png" alt="Equipo" class="sub-seccion-img">
+    <div class="container">
+      <h2>Equipo</h2>
+      <p>
+        Nuestro equipo está formado por profesionales con años de experiencia en carpintería metálica, diseño técnico y montaje de estructuras. Cada uno aporta valor y compromiso en cada proyecto.
+      </p>
+    </div>
+  </section>
 
-<!-- JESICA seccion valores -->
-<section id="valores" class="sub-seccion">
-  <img src="imagenes/valores.png" alt="Valores" class="sub-seccion-img">
+  <section id="valores" class="sub-seccion">
+    <img src="imagenes/valores.png" alt="Valores" class="sub-seccion-img">
+    <div class="container">
+      <h2>Valores</h2>
+      <p>
+        Nos guiamos por la honestidad, la excelencia en el trabajo y la atención personalizada. Creemos que la confianza con nuestros clientes se construye con hechos, no solo con palabras.
+      </p>
+    </div>
+  </section>
 
-  <div class="container">
-    <h2>Valores</h2>
-    <p>
-      Nos guiamos por la honestidad, la excelencia en el trabajo y la atención personalizada. Creemos que la confianza con nuestros clientes se construye con hechos, no solo con palabras.
-    </p>
-  </div>
-</section>
-<!-- JESICA seccion compromiso -->
-<section id="compromiso" class="sub-seccion">
-  <img src="imagenes/compromiso.png" alt="Compromiso" class="sub-seccion-img">
+  <section id="compromiso" class="sub-seccion">
+    <img src="imagenes/compromiso.png" alt="Compromiso" class="sub-seccion-img">
+    <div class="container">
+      <h2>Compromiso</h2>
+      <p>
+        Nos comprometemos a ofrecer soluciones metálicas duraderas, seguras y a medida, cumpliendo siempre con los plazos y expectativas. La satisfacción del cliente es nuestra prioridad.
+      </p>
+    </div>
+  </section>
 
-  <div class="container">
-    <h2>Compromiso</h2>
-    <p>
-      Nos comprometemos a ofrecer soluciones metálicas duraderas, seguras y a medida, cumpliendo siempre con los plazos y expectativas. La satisfacción del cliente es nuestra prioridad.
-    </p>
-  </div>
-</section>
-<!-- JESICA enlace a archivo js -->
-<script src="js/script.js"></script>
-
-</body>
+<!-- Botón WhatsApp -->
+  <div class="whatsapp" onclick="window.open('https://wa.me/34123456789','_blank')">💬</div>
+<!-- Botón Subir -->
+<button id="btn-top" aria-label="Subir arriba del todo">⇧</button></body>
 </html>

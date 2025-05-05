@@ -1,40 +1,132 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Servicios - Metálicas Jobie</title>
-  <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Servicios - Metálicas Jobie</title>
+    <!-- Conexión con CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/gallery.css" />
+    <link rel="stylesheet" href="css/whatsapp.css" />
+      <!-- Conexión con JavaScript -->
+    <script src="js/script.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <div class="container-flex nav-container">
+        <img
+          src="imagenes/logo.jpg"
+          alt="Logotipo Metálicas Jobie"
+          class="logo-img"
+        />
+        <div class="hamburger" id="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
 
-  <header class="main-header">
-    <div class="container nav-container">
-      <img src="imagenes/logo.jpg" alt="Logotipo Metálicas Jobie" class="logo-img">
-      <h1 class="logo">Ingeniería en Acero</h1>
-      <nav class="nav">
-        <ul class="nav">
-          <li><a href="index.html">Inicio</a></li>
-          <li><a href="nosotros.html">Sobre Nosotros</a></li>
-          <li><a href="servicios.html">Servicios</a></li>
-          <li><a href="contacto.html">Contacto</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+        <nav class="nav" id="navMenu">
+          <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="nosotros.html">Sobre Nosotros</a></li>
+            <li><a href="servicios.html">Servicios</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
 
-  <section class="seccion">
-    <div class="container">
-      <h2>Servicios</h2>
-      <p>Ofrecemos soluciones metálicas personalizadas como:</p>
-<ul>
-  <li>✔ Barandillas de acero inoxidable y forja</li>
-  <li>✔ Estructuras metálicas para obras industriales</li>
-  <li>✔ Rejas, puertas, escaleras y soportes a medida</li>
-</ul>
-    </div>
+    <section class="seccion">
+      <div class="container">
+        <h2>Servicios</h2>
+        <h3>Ofrecemos soluciones metálicas personalizadas como:</h3>
+      </div>
+    </section>
+    
+    <section id="servicios" class="section">
+      <div class="services">
+        <div class="service">
+          <h3>Puertas y Ventanas</h3>
+          <p>
+            Fabricación e instalación de puertas y ventanas metálicas resistentes y estéticas.
+          </p>
+        </div>
+        <div class="service">
+          <h3>Barandillas y Escaleras</h3>
+          <p>
+            Diseños a medida en hierro y acero inoxidable para interior y exterior.
+          </p>
+        </div>
+        <div class="service">
+          <h3>Estructuras Metálicas</h3>
+          <p>
+            Montaje de estructuras robustas para todo tipo de edificaciones.
+          </p>
+        </div>
+        <div class="service">
+          <h3>Reparaciones</h3>
+          <p>
+            Servicio de reparación y mantenimiento de instalaciones metálicas.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="gallery">
+      <div class="gallery-row">
+          <div class="gallery-item">
+              <a href="imagenes/galeria/img1.jpg" data-fancybox="gallery" data-caption="Puertas y Ventanas">
+                  <img src="imagenes/galeria/img1.jpg" alt="Puertas y Ventanas">
+              </a>
+          </div>
+          <div class="gallery-item">
+              <a href="imagenes/galeria/img2.jpg" data-fancybox="gallery" data-caption="Barandilla inox">
+                  <img src="imagenes/galeria/img2.jpg" alt="Barandilla inox">
+              </a>
+          </div>
+          <div class="gallery-item">
+              <a href="imagenes/galeria/img3.jpg" data-fancybox="gallery" data-caption="Escalera exterior">
+                  <img src="imagenes/galeria/img3.jpg" alt="Escalera exterior">
+              </a>
+          </div>
+          <div class="gallery-item">
+              <a href="imagenes/galeria/img4.jpg" data-fancybox="gallery" data-caption="Estructura metálica">
+                  <img src="imagenes/galeria/img4.jpg" alt="Estructura metálica">
+              </a>
+          </div>
+          <div class="gallery-item">
+              <a href="imagenes/galeria/img5.jpg" data-fancybox="gallery" data-caption="Mantenimiento">
+                  <img src="imagenes/galeria/img5.jpg" alt="Mantenimiento">
+              </a>
+          </div>
+          <div class="gallery-item">
+              <a href="imagenes/galeria/img6.jpg" data-fancybox="gallery" data-caption="Pared inox">
+                  <img src="imagenes/galeria/img6.jpg" alt="Pared inox">
+              </a>
+          </div>
+      </div>
   </section>
 
-</body>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+    <script>
+      Fancybox.bind('[data-fancybox="gallery"]', {
+        animated: true,
+        Images: {
+          zoom: true,
+        },
+      });
+    </script>
+    
+<!-- Botón WhatsApp -->
+    <div
+      class="whatsapp"
+      onclick="window.open('https://wa.me/34123456789','_blank')">💬</div>
+
+    <!-- Botón Subir ⇧ -->
+<button id="btn-top" aria-label="Subir arriba del todo">⇧</button>
+  </body>
 </html>
- <!-- JESICA HTML-CSS -->
