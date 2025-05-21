@@ -83,6 +83,8 @@ ul {
 
 /* Hero */
 .hero-section {
+  /*nombro la capa oscura con relative*/
+   position: relative;
   background-image: url("../imagenes/imagenHero.png");
   background-size: cover;
   background-position: center;
@@ -91,17 +93,28 @@ ul {
   text-align: center;
 }
 
-.hero-content h2 {
+.hero-content h1 {
   font-size: 48px;
   margin-bottom: 20px;
 }
-
+/* La capa oscura */
+.hero-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 0;
+}
+.hero-content {
+  position: relative;
+  z-index: 1;
+}
 .hero-content p {
   font-size: 20px;
   margin-bottom: 30px;
 }
 @media (max-width: 768px) {
-  .hero-content h2 {
+  .hero-content h1 {
     font-size: 28px; /* más pequeño en móvil */
     line-height: 1.3;
   }

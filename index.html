@@ -11,7 +11,7 @@
 </head>
 
 <body>
-  <header>
+  <header role="banner">
     <div class="container-flex nav-container">
       <img src="imagenes/logo.jpg" alt="Logotipo Metálicas Jobie" class="logo-img">
 
@@ -21,7 +21,7 @@
           <span></span>
       </div>
     
-      <nav class="nav" id="navMenu">
+      <nav class="nav" id="navMenu" role="navigation" aria-label="Menú principal">
         <ul>
           <li><a href="index.html">Inicio</a></li>
           <li><a href="nosotros.html">Sobre Nosotros</a></li>
@@ -31,16 +31,16 @@
       </nav>
     </div>
   </header>
-  
+   <main role="main">
   <!-- Hero -->
   <section id="inicio" class="hero-section">
     <div class="hero-content">
-      <h2 id="titulo-animado">Solidez en cada estructura</h2>
+      <h1 id="titulo-animado">Solidez en cada estructura</h1>
       <p>Especialistas en acero inoxidable, hierro y forja</p>
       <a href="servicios.html" class="btn" id="btn-servicios">Trabajos de calidad a tu servicio</a>
     </div>
   </section>
-  
+</main>
  <!-- Botón WhatsApp -->
   <div class="whatsapp" onclick="window.open('https://wa.me/34123456789','_blank')">💬</div>
 
