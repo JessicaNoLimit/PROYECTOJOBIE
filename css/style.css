@@ -137,9 +137,15 @@ ul {
 
 /* Botón */
 .btn {
-  background-color: #3498db;
+  display: inline-block;
+  background-color: #004a7c;
   color: white;
-  padding: 12px 25px;
+  padding: 60px 90px;
+  font-size: 55px;
+  min-width: 60px;
+  min-height: 60px;
+  line-height: 1;
+  color: white;
   border-radius: 4px;
   text-decoration: none;
   font-weight: bold;
@@ -147,7 +153,7 @@ ul {
 }
 
 .btn:hover {
-  background-color: #2980b9;
+  background-color: #003857;
 }
 
 /* Secciones */
