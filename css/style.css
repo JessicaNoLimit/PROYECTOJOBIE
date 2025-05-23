@@ -185,7 +185,7 @@ ul {
   font-weight: bold;
   transition: background-color 0.3s ease, transform 0.3s ease;
 }
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .btn-grande {
     padding: 14px 24px;
     font-size: 1.1rem;
