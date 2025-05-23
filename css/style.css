@@ -325,10 +325,13 @@ ul {
   gap: 20px;
 }
 /* Corrección responsiva para los recuadros de servicios */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .services {
     grid-template-columns: 1fr; /* una columna en móvil */
     padding: 0 1rem; /* espacio a los lados para que no se peguen */
+  }
+  .service {
+    max-width: 100%;
   }
 }
 /* Menú hamburguesa */
