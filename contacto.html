@@ -33,20 +33,14 @@
 
   <section class="seccion">
     <div class="container">
-      <h2>Contáctanos</h2>
-      <p>
-        ¿Tienes un proyecto en mente? Estamos aquí para ayudarte a hacerlo realidad.
-      </p>
-      <p>
-        Completa el formulario y uno de nuestros especialistas se pondrá en contacto contigo lo antes posible para ofrecerte una solución a medida.
-      </p>
+      <div id="intro-contacto">
+        <h2>Contáctanos</h2>
+        <p>¿Tienes un proyecto en mente? Estamos aquí para ayudarte a hacerlo realidad.</p>
+        <p>Completa el formulario y uno de nuestros especialistas se pondrá en contacto contigo lo antes posible para ofrecerte una solución a medida.</p>
+      </div>
       <!-- Formulario de contacto con validación y Formspree -->
-      <form 
-        action="https://formspree.io/f/mzzrqqew" 
-        method="POST" 
-        class="formulario-caja" 
-        id="formulario-contacto"
-      >
+      <form class="formulario-caja" id="formulario-contacto">
+
         <label for="nombre">Nombre:</label>
         <input type="text" id="nombre" name="nombre" required>
         <span class="error" id="error-nombre"></span>
@@ -60,12 +54,25 @@
         <span class="error" id="error-mensaje"></span>
 
         <input type="text" name="_honey" style="display:none">
-        <input type="hidden" name="_redirect" value="gracias.html">
 
         <button type="submit" class="btn">Enviar</button>
-      </form> 
-    </div>
-  </section>
+      </form>
+
+      <div id="mensaje-gracias" style="
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1.2rem;
+  padding: 2rem;
+">
+  <h1>¡Gracias por tu mensaje!</h1>
+  <p>Hemos recibido tu consulta y nos pondremos en contacto contigo lo antes posible.</p>
+  <a href="index.html" class="btn">Volver al inicio</a>
+</div>
+      
+      </div>
+      </section>
 
   <!-- Mapa Google Maps -->
   <section class="seccion">

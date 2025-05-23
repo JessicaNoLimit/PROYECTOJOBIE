@@ -51,12 +51,14 @@ if (boton) {
 }
 
 // ===================================================
-// JESICA / ARTEM - VALIDACIÓN FORMULARIO VISUAL
+// JESICA / ARTEM - VALIDACIÓN Y ENVÍO A FORMSPREE
 // ===================================================
 const formulario = document.getElementById('formulario-contacto');
 
 if (formulario) {
-  formulario.addEventListener('submit', function(e) {
+  formulario.addEventListener('submit', function (e) {
+    e.preventDefault(); // evitar envío tradicional
+
     let hayErrores = false;
 
     const nombre = document.getElementById('nombre');
@@ -67,30 +69,55 @@ if (formulario) {
     const errorEmail = document.getElementById('error-email');
     const errorMensaje = document.getElementById('error-mensaje');
 
-    // Limpiar mensajes anteriores
-    errorNombre.textContent = '';
-    errorEmail.textContent = '';
-    errorMensaje.textContent = '';
+    [errorNombre, errorEmail, errorMensaje].forEach(el => el.textContent = '');
 
     const patronEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-    if (!nombre || nombre.value.trim().length < 3) {
+    if (!nombre.value.trim() || nombre.value.trim().length < 3) {
       errorNombre.textContent = 'Por favor, escribe un nombre válido (mínimo 3 letras).';
       hayErrores = true;
     }
 
-    if (!email || !patronEmail.test(email.value.trim())) {
+    if (!email.value.trim() || !patronEmail.test(email.value.trim())) {
       errorEmail.textContent = 'Por favor, introduce un correo electrónico válido.';
       hayErrores = true;
     }
 
-    if (!mensaje || mensaje.value.trim() === "") {
+    if (!mensaje.value.trim()) {
       errorMensaje.textContent = 'El mensaje no puede estar vacío.';
       hayErrores = true;
     }
 
-    if (hayErrores) {
-      e.preventDefault(); // No enviar si hay errores
+    if (!hayErrores) {
+      const formData = new FormData(formulario);
+
+      fetch("https://formspree.io/f/mzzrqqew", {
+        method: "POST",
+        body: formData,
+        headers: {
+          'Accept': 'application/json'
+        }
+      })
+      .then(response => {
+        if (response.ok) {
+          formulario.style.display = 'none';
+      
+          const intro = document.getElementById('intro-contacto');
+          if (intro) {
+            intro.style.display = 'none';
+          }
+      
+          const mensajeGracias = document.getElementById('mensaje-gracias');
+          if (mensajeGracias) {
+            mensajeGracias.style.display = 'flex';
+          }
+        } else {
+          alert('Hubo un problema al enviar el formulario. Intenta de nuevo.');
+        }
+      })
+      .catch(error => {
+        alert('Error de conexión. Por favor, revisa tu red.');
+      });
     }
   });
 }
