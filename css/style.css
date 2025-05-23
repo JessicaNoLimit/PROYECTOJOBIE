@@ -91,6 +91,8 @@ ul {
   padding: 120px 20px;
   color: rgb(171, 212, 225);
   text-align: center;
+  min-height: 60vh;
+}
 }
 
 .hero-content h1 {
@@ -113,6 +115,22 @@ ul {
   font-size: 20px;
   margin-bottom: 30px;
 }
+
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 60px 20px;
+    min-height: 70vh; /* ✅ Esto asegura que ocupe suficiente altura */
+  }
+
+  .hero-content h1 {
+    font-size: 28px;
+  }
+
+  .hero-content p {
+    font-size: 16px;
+  }
+}
+
 @media (max-width: 768px) {
   .hero-content h1 {
     font-size: 28px; /* más pequeño en móvil */
