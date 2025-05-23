@@ -40,16 +40,27 @@
       <p>
         Completa el formulario y uno de nuestros especialistas se pondrá en contacto contigo lo antes posible para ofrecerte una solución a medida.
       </p>
-      <!-- Formulario de contacto -->
-      <form id="formulario-contacto" class="formulario-caja">
+      <!-- Formulario de contacto con validación y Formspree -->
+      <form 
+        action="https://formspree.io/f/mzzrqqew" 
+        method="POST" 
+        class="formulario-caja" 
+        id="formulario-contacto"
+      >
         <label for="nombre">Nombre:</label>
         <input type="text" id="nombre" name="nombre" required>
+        <span class="error" id="error-nombre"></span>
 
         <label for="email">Correo electrónico:</label>
         <input type="email" id="email" name="email" required>
+        <span class="error" id="error-email"></span>
 
         <label for="mensaje">Mensaje:</label>
         <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+        <span class="error" id="error-mensaje"></span>
+
+        <input type="text" name="_honey" style="display:none">
+        <input type="hidden" name="_redirect" value="gracias.html">
 
         <button type="submit" class="btn">Enviar</button>
       </form> 

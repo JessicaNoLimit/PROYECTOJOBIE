@@ -51,33 +51,46 @@ if (boton) {
 }
 
 // ===================================================
-// JESICA / ARTEM - VALIDACIÓN FORMULARIO DE CONTACTO
+// JESICA / ARTEM - VALIDACIÓN FORMULARIO VISUAL
 // ===================================================
 const formulario = document.getElementById('formulario-contacto');
+
 if (formulario) {
   formulario.addEventListener('submit', function(e) {
+    let hayErrores = false;
+
     const nombre = document.getElementById('nombre');
-    const campoEmail = document.getElementById('email');
-    const campoMensaje = document.getElementById('mensaje');
+    const email = document.getElementById('email');
+    const mensaje = document.getElementById('mensaje');
+
+    const errorNombre = document.getElementById('error-nombre');
+    const errorEmail = document.getElementById('error-email');
+    const errorMensaje = document.getElementById('error-mensaje');
+
+    // Limpiar mensajes anteriores
+    errorNombre.textContent = '';
+    errorEmail.textContent = '';
+    errorMensaje.textContent = '';
 
     const patronEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
     if (!nombre || nombre.value.trim().length < 3) {
-      e.preventDefault();
-      alert('Por favor, escribe un nombre válido (mínimo 3 letras).');
-      return;
+      errorNombre.textContent = 'Por favor, escribe un nombre válido (mínimo 3 letras).';
+      hayErrores = true;
     }
 
-    if (!campoEmail || !patronEmail.test(campoEmail.value.trim())) {
-      e.preventDefault();
-      alert('Por favor, introduce un correo electrónico válido.');
-      return;
+    if (!email || !patronEmail.test(email.value.trim())) {
+      errorEmail.textContent = 'Por favor, introduce un correo electrónico válido.';
+      hayErrores = true;
     }
 
-    if (!campoMensaje || campoMensaje.value.trim() === "") {
-      e.preventDefault();
-      alert('El mensaje no puede estar vacío.');
-      return;
+    if (!mensaje || mensaje.value.trim() === "") {
+      errorMensaje.textContent = 'El mensaje no puede estar vacío.';
+      hayErrores = true;
+    }
+
+    if (hayErrores) {
+      e.preventDefault(); // No enviar si hay errores
     }
   });
 }

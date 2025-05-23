@@ -427,3 +427,11 @@ ul {
   transform: translateX(-50%) scale(1.1);
   background: #2980b9;
 }
+
+/* ====== MENSAJES DE ERROR EN FORMULARIO ====== */
+.error {
+  color: red;
+  font-size: 0.9em;
+  margin-top: 5px;
+  display: block;
+}
