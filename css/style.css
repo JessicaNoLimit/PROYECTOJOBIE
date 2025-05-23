@@ -185,16 +185,17 @@ ul {
   font-weight: bold;
   transition: background-color 0.3s ease, transform 0.3s ease;
 }
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
   .btn-grande {
-    padding: 14px 24px;
-    font-size: 1.1rem;
-    width: auto;
-    max-width: 90%;
+    padding: 12px 20px !important;
+    font-size: 1rem !important;
+    width: 100% !important;
+    max-width: 300px;
+    display: block;
+    margin: 0 auto;
     line-height: 1.2;
     white-space: normal;
-    text-align: center;
-    display: inline-block;
+    border-radius: 8px;
   }
 }
 .btn:hover {
