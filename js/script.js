@@ -13,6 +13,19 @@ document.querySelectorAll('a[href^="#"]').forEach(enlace => {
   });
 });
 
+// ==============================
+// ARTEM - Reset visual al cargar contacto.html
+// ==============================
+window.addEventListener("DOMContentLoaded", () => {
+  const mensajeGracias = document.getElementById('mensaje-gracias');
+  const intro = document.getElementById('intro-contacto');
+  const formulario = document.getElementById('formulario-contacto');
+
+  if (mensajeGracias) mensajeGracias.style.display = 'none';
+  if (intro) intro.style.display = 'block';
+  if (formulario) formulario.style.display = 'block';
+});
+
 // =============================================
 // JESICA - Animación palabra por palabra (Hero)
 // =============================================
